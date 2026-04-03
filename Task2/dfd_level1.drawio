@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="DFD Level 1 — Потоки между доменами" id="dfd_l1">
+    <mxGraphModel dx="1422" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="580">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ==================== ДОМЕНЫ (левый столбец) ==================== -->
+
+        <mxCell id="clinic" value="&lt;b&gt;Клиники&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;Управление пациентами&lt;br&gt;Расписание · Инвентаризация&lt;br&gt;Управление персоналом&lt;br&gt;&lt;i&gt;Clinic DB (PostgreSQL)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fintech" value="&lt;b&gt;Финтех&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;Кредитование · Платежи · Скоринг&lt;br&gt;&lt;i&gt;FinTech DB (PostgreSQL)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="175" width="240" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ai" value="&lt;b&gt;ИИ-сервисы&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;Диагностика · Анализ снимков&lt;br&gt;Рекомендации лечения&lt;br&gt;&lt;i&gt;Feature Store (S3 + ClickHouse)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="30" y="320" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== KAFKA (центр) ==================== -->
+
+        <mxCell id="kafka" value="&lt;b style=&quot;font-size:13px&quot;&gt;Apache Kafka&lt;/b&gt;&lt;br&gt;Событийная шина" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="110" width="150" height="240" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== ПАРТНЁРЫ (под Kafka) ==================== -->
+
+        <mxCell id="pharma" value="&lt;b&gt;Фармацевтика&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="345" y="460" width="120" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="electro" value="&lt;b&gt;Электроника&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="495" y="460" width="120" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== ОБРАБОТКА ==================== -->
+
+        <mxCell id="dwh" value="&lt;b&gt;Legacy DWH&lt;/b&gt;&lt;br&gt;SQL Server 2008" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;dashPattern=8 8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="675" y="35" width="140" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="etl" value="&lt;b&gt;ETL / ELT&lt;/b&gt;&lt;br&gt;Airflow + dbt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="675" y="200" width="140" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== ХРАНИЛИЩА ==================== -->
+
+        <mxCell id="dl" value="&lt;b&gt;Data Lake&lt;/b&gt;&lt;br&gt;S3 Object Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="110" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ch" value="&lt;b&gt;ClickHouse&lt;/b&gt;&lt;br&gt;Аналитическое хранилище" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="280" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== АНАЛИТИКА ==================== -->
+
+        <mxCell id="bi" value="&lt;b&gt;BI Engine&lt;/b&gt;&lt;br&gt;Apache Superset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="110" width="140" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="portal" value="&lt;b&gt;Портал&lt;br&gt;самообслуживания&lt;/b&gt;&lt;br&gt;Витрина данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="280" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="corp" value="&lt;b&gt;Головной офис&lt;/b&gt;&lt;br&gt;Отчётность · KPI&lt;br&gt;Data Governance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="430" width="140" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ==================== ПОТОКИ ДАННЫХ ==================== -->
+
+        <!-- Домены → Kafka -->
+        <mxCell id="e1" value="события: пациенты,&lt;br&gt;записи, инвентарь, персонал" style="endArrow=classic;html=1;fontSize=8;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.15;entryPerimeter=0;" edge="1" source="clinic" target="kafka" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="события: заявки, платежи&lt;br&gt;← данные клиентов (скоринг)" style="endArrow=classic;startArrow=classic;html=1;fontSize=8;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.48;entryPerimeter=0;" edge="1" source="fintech" target="kafka" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="мед. данные (обезличенные) →&lt;br&gt;← результаты диагностики" style="endArrow=classic;startArrow=classic;html=1;fontSize=8;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.85;entryPerimeter=0;" edge="1" source="ai" target="kafka" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Kafka → ETL -->
+        <mxCell id="e4" value="все доменные события" style="endArrow=classic;html=1;fontSize=9;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="kafka" target="etl" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- DWH -..-> ETL -->
+        <mxCell id="e5" value="историческая&lt;br&gt;миграция (batch)" style="endArrow=classic;html=1;fontSize=8;dashed=1;dashPattern=8 8;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="dwh" target="etl" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ETL → хранилища -->
+        <mxCell id="e6" value="сырые данные" style="endArrow=classic;html=1;fontSize=9;exitX=1;exitY=0.3;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="etl" target="dl" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" value="агрегаты, витрины" style="endArrow=classic;html=1;fontSize=9;exitX=1;exitY=0.7;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="etl" target="ch" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ClickHouse → аналитика -->
+        <mxCell id="e8" value="визуализация" style="endArrow=classic;html=1;fontSize=9;exitX=1;exitY=0.25;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="ch" target="bi" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e9" value="ad-hoc запросы" style="endArrow=classic;html=1;fontSize=9;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="ch" target="portal" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e10" value="консолидированные&lt;br&gt;данные · KPI" style="endArrow=classic;html=1;fontSize=8;exitX=1;exitY=0.75;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" edge="1" source="ch" target="corp" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- BI → Портал -->
+        <mxCell id="e11" value="встроенные дашборды" style="endArrow=classic;html=1;fontSize=8;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="bi" target="portal" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Kafka ↔ Партнёры -->
+        <mxCell id="e12" value="каталоги · заказы" style="endArrow=classic;startArrow=classic;html=1;fontSize=8;exitX=0.3;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="kafka" target="pharma" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e13" value="каталоги · заказы" style="endArrow=classic;startArrow=classic;html=1;fontSize=8;exitX=0.7;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="kafka" target="electro" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
