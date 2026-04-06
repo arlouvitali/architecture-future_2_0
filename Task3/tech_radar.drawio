@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Технологический радар" id="techradar">
+    <mxGraphModel dx="920" dy="840" grid="0" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="920" pageHeight="840">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ========== КОЛЬЦА (концентрические окружности) ========== -->
+        <mxCell id="ring_hold" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#E0E0E0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="800" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="ring_assess" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BDBDBD;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="100" width="640" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="ring_trial" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#9E9E9E;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="190" width="460" height="460" as="geometry"/>
+        </mxCell>
+        <mxCell id="ring_adopt" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#757575;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="290" width="260" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== ПЕРЕКРЕСТИЕ (линии квадрантов) ========== -->
+        <mxCell id="cross_h" value="" style="endArrow=none;html=1;strokeColor=#BDBDBD;strokeWidth=1;dashed=1;dashPattern=4 4;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="420" as="sourcePoint"/>
+            <mxPoint x="860" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cross_v" value="" style="endArrow=none;html=1;strokeColor=#BDBDBD;strokeWidth=1;dashed=1;dashPattern=4 4;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="20" as="sourcePoint"/>
+            <mxPoint x="460" y="820" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== МЕТКИ КВАДРАНТОВ ========== -->
+        <mxCell id="ql_tl" value="ЯЗЫКИ И ФРЕЙМВОРКИ" style="text;html=1;fontSize=11;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#616161;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="30" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ql_tr" value="ПЛАТФОРМЫ И ИНФРАСТРУКТУРА" style="text;html=1;fontSize=11;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#616161;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="30" width="250" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ql_bl" value="ИНСТРУМЕНТЫ" style="text;html=1;fontSize=11;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#616161;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="805" width="150" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ql_br" value="МЕТОДОЛОГИИ" style="text;html=1;fontSize=11;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#616161;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="805" width="150" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== МЕТКИ КОЛЕЦ (вдоль правой оси) ========== -->
+        <mxCell id="rl_adopt" value="ADOPT" style="text;html=1;fontSize=9;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#4CAF50;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="405" width="50" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl_trial" value="TRIAL" style="text;html=1;fontSize=9;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#2196F3;align=center;" vertex="1" parent="1">
+          <mxGeometry x="630" y="405" width="50" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl_assess" value="ASSESS" style="text;html=1;fontSize=9;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#9C27B0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="720" y="405" width="55" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl_hold" value="HOLD" style="text;html=1;fontSize=9;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#F44336;align=center;" vertex="1" parent="1">
+          <mxGeometry x="810" y="405" width="45" height="16" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== Q2: ЯЗЫКИ И ФРЕЙМВОРКИ (верхний левый) ========== -->
+
+        <!-- Adopt -->
+        <mxCell id="t_golang" value="Golang" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="305" width="70" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_java" value="Java / Kotlin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="330" width="85" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_python" value="Python + FastAPI" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="345" y="355" width="100" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_react" value="React + TypeScript" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="380" width="105" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Hold -->
+        <mxCell id="t_powerbuilder" value="PowerBuilder" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#FFCDD2;strokeColor=#F44336;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="130" width="90" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== Q1: ПЛАТФОРМЫ И ИНФРАСТРУКТУРА (верхний правый) ========== -->
+
+        <!-- Adopt -->
+        <mxCell id="t_yc" value="Yandex Cloud" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="305" width="90" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_docker" value="Docker + K8s" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="475" y="330" width="85" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_terraform" value="Terraform" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="355" width="70" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_gitci" value="Git + CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="475" y="380" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_pg" value="PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="565" y="330" width="75" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_s3" value="S3 Storage" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="355" width="75" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Trial -->
+        <mxCell id="t_ch" value="ClickHouse" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#BBDEFB;strokeColor=#2196F3;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="530" y="250" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Assess -->
+        <mxCell id="t_argocd" value="Argo CD (GitOps)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#E1BEE7;strokeColor=#9C27B0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="160" width="110" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Hold -->
+        <mxCell id="t_sqlserver" value="SQL Server 2008" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#FFCDD2;strokeColor=#F44336;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="70" width="105" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== Q3: ИНСТРУМЕНТЫ (нижний левый) ========== -->
+
+        <!-- Adopt -->
+        <mxCell id="t_kafka" value="Apache Kafka" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="345" y="430" width="90" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_airflow" value="Apache Airflow" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="455" width="95" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_keycloak" value="Keycloak IAM" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="360" y="480" width="90" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Trial -->
+        <mxCell id="t_dbt" value="dbt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#BBDEFB;strokeColor=#2196F3;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="45" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_avro" value="Avro / Protobuf" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#BBDEFB;strokeColor=#2196F3;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="245" y="470" width="100" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_kong" value="Kong API GW" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#BBDEFB;strokeColor=#2196F3;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="500" width="90" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_superset" value="Apache Superset" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#BBDEFB;strokeColor=#2196F3;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="280" y="530" width="105" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Assess -->
+        <mxCell id="t_otel" value="OpenTelemetry" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#E1BEE7;strokeColor=#9C27B0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="175" y="540" width="95" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Hold -->
+        <mxCell id="t_camel" value="Apache Camel ESB" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#FFCDD2;strokeColor=#F44336;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="610" width="115" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_powerbi" value="Power BI" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#FFCDD2;strokeColor=#F44336;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="130" y="650" width="65" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== Q4: МЕТОДОЛОГИИ (нижний правый) ========== -->
+
+        <!-- Adopt -->
+        <mxCell id="t_ddd" value="DDD" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="432" width="45" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_iac" value="IaC" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="457" width="38" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_eda" value="Event-Driven" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#C8E6C9;strokeColor=#4CAF50;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="482" width="85" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Assess -->
+        <mxCell id="t_datamesh" value="Data Mesh" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#E1BEE7;strokeColor=#9C27B0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="545" y="535" width="75" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_featurestore" value="Feature Store" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#E1BEE7;strokeColor=#9C27B0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="555" y="565" width="90" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_gitops" value="GitOps" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;fillColor=#E1BEE7;strokeColor=#9C27B0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="595" width="55" height="20" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
